@@ -318,6 +318,112 @@ h1 .last{
 }
 .skill-tag:hover{border-color:var(--accent);transform:translateY(-3px);}
 
+/* ---------- EXPERIENCE ---------- */
+
+.timeline{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:155px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:var(--line);
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:34px;
+    position:relative;
+}
+
+.timeline-date{
+    text-align:right;
+    padding-top:6px;
+}
+
+.timeline-date span{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    color:var(--accent);
+    letter-spacing:.05em;
+}
+
+.timeline-content{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:26px;
+    transition:.25s ease;
+}
+
+.timeline-content:hover{
+    border-color:var(--accent);
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(0,0,0,.05);
+}
+
+
+
+.timeline-content h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.45rem;
+    margin-bottom:4px;
+}
+
+.company{
+    display:block;
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:16px;
+}
+
+.timeline-content p{
+    color:#4B4759;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.experience-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+}
+
+.experience-tags span{
+    padding:8px 14px;
+    border-radius:999px;
+    background:#F8F6FC;
+    border:1px solid var(--line);
+    font-size:12px;
+    font-weight:600;
+}
+.experience-list{
+    margin-top:18px;
+    padding-left:18px;
+    color:#4B4759;
+}
+
+.experience-list li{
+    margin-bottom:10px;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.experience-list li:last-child{
+    margin-bottom:0;
+}
+
 /* ---------- ABOUT ---------- */
 .about-grid{
   display:grid;
@@ -414,6 +520,22 @@ footer{
   .monogram{font-size:clamp(120px,34vw,220px);}
   .contact{grid-template-columns:1fr;}
   .about-grid{grid-template-columns:1fr;}
+  .timeline::before{
+    left:10px;
+    }
+
+    .timeline-item{
+        grid-template-columns:1fr;
+        padding-left:34px;
+    }
+
+    .timeline-date{
+        text-align:left;
+    }
+
+    .timeline-content::before{
+        left:-31px;
+    }
 }
 
 @media (max-width:760px){
